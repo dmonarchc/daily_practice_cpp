@@ -38,7 +38,10 @@ void multiplicar(int multiplicador) {
 }    
 
 void dividir(int divisor) {
-    total /= divisor;
+    if(divisor != 0)
+        total /= divisor;
+    else
+        std::cout << "Error: no se puede dividir por cero." << std::endl;
 }
 
 int main (void) {
@@ -83,6 +86,8 @@ int main (void) {
                 break;
             case 6:
                 break;
+            default:
+                std::cout << "Opcion invalida. Intente de nuevo." << std::endl;
         }
     }
     return 0;
